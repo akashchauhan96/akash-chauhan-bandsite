@@ -30,32 +30,30 @@ body {
 .header {
   background-color: #323232;
 }
-
 .header__img-container {
   display: flex;
   justify-content: center;
 }
-
 .header__logo {
   display: inline-block;
   margin: 0.75rem 0 0.75rem;
 }
-
 .header__nav-items {
   display: flex;
 }
-
 .header__nav-item {
   width: 50%;
   padding-bottom: 0.75rem;
   text-align: center;
 }
-
 .header__nav-item--active {
-  border-bottom: 10px solid #fff;
+  font-weight: 600;
+  border-bottom: 0.25rem solid #fff;
 }
-
 .header__nav-link {
   text-decoration: none;
   color: #fff;
+}
+.header__nav-link--unselected {
+  color: #e1e1e1;
 }/*# sourceMappingURL=bio.css.map */
