@@ -7,11 +7,6 @@
   background-color: $primary-color-black;
 }
 
-.header__container {
-  text-align: center;
-  margin: 0 1rem;
-}
-
 .header__img-container {
   display: flex;
   justify-content: center;
@@ -30,6 +25,10 @@
   width: 50%;
   padding-bottom: 0.75rem;
   text-align: center;
+}
+
+.header__nav-item--active {
+  border-bottom: 10px solid #fff;
 }
 
 .header__nav-link {

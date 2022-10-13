@@ -31,11 +31,6 @@ body {
   background-color: #323232;
 }
 
-.header__container {
-  text-align: center;
-  margin: 0 1rem;
-}
-
 .header__img-container {
   display: flex;
   justify-content: center;
@@ -54,6 +49,10 @@ body {
   width: 50%;
   padding-bottom: 0.75rem;
   text-align: center;
+}
+
+.header__nav-item--active {
+  border-bottom: 10px solid #fff;
 }
 
 .header__nav-link {
