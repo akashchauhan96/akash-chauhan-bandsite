@@ -6,3 +6,20 @@
 .header {
   background-color: $primary-color-black;
 }
+
+.header__container {
+  text-align: center;
+  margin: 0 1rem;
+}
+
+.header__logo {
+  display: inline-block;
+}
+
+.header__nav-items {
+  display: flex;
+}
+
+.header__nav-item {
+  width: 50%;
+}
