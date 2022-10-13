@@ -1,0 +1,8 @@
+@use "../partials/global" as *;
+@use "../partials/variables" as *;
+@use "../partials/fonts" as *;
+@use "../partials/mixins" as *;
+
+.header {
+  background-color: $primary-color-black;
+}
