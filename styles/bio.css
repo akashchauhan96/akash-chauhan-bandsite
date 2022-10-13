@@ -8,6 +8,10 @@ html {
   font-size: 100%;
 }
 
+body {
+  font-family: "AvenirNextLTPro";
+}
+
 @font-face {
   font-family: "AvenirNextLTPro";
   src: url(../../assets/font/AvenirNextLTPro-Regular.woff2), url(../../assets/font/AvenirNextLTPro-Regular.woff);
