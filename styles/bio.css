@@ -36,8 +36,14 @@ body {
   margin: 0 1rem;
 }
 
+.header__img-container {
+  display: flex;
+  justify-content: center;
+}
+
 .header__logo {
   display: inline-block;
+  margin: 0.75rem 0 0.75rem;
 }
 
 .header__nav-items {
@@ -46,4 +52,11 @@ body {
 
 .header__nav-item {
   width: 50%;
+  padding-bottom: 0.75rem;
+  text-align: center;
+}
+
+.header__nav-link {
+  text-decoration: none;
+  color: #fff;
 }/*# sourceMappingURL=bio.css.map */
