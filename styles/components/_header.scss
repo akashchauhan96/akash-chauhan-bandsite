@@ -38,5 +38,13 @@
     &--unselected {
       color: $secondary-color-mercury;
     }
+
+    &--padding-left {
+      padding-left: 1rem;
+    }
+
+    &--padding-right {
+      padding-right: 1rem;
+    }
   }
 }

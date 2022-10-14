@@ -56,4 +56,10 @@ body {
 }
 .header__nav-link--unselected {
   color: #e1e1e1;
+}
+.header__nav-link--padding-left {
+  padding-left: 1rem;
+}
+.header__nav-link--padding-right {
+  padding-right: 1rem;
 }/*# sourceMappingURL=bio.css.map */
