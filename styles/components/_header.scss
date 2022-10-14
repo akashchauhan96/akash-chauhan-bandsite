@@ -6,6 +6,21 @@
 .header {
   background-color: $primary-color-black;
 
+  &__container {
+    @include tablet {
+      display: flex;
+      padding: 0 2.25rem;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    @include desktop {
+      width: 63.75rem;
+      padding: 0;
+      margin: 0 auto;
+    }
+  }
+
   &__img-container {
     display: flex;
     justify-content: center;
@@ -13,17 +28,37 @@
 
   &__logo {
     display: inline-block;
-    margin: 0.75rem 0 0.75rem;
+    margin: 1.25rem 0 1.25rem;
+
+    @include tablet {
+      display: block;
+      margin: 0;
+    }
   }
 
   &__nav-items {
     display: flex;
+    list-style: none;
+
+    @include tablet {
+      gap: 3rem;
+    }
   }
 
   &__nav-item {
     width: 50%;
     padding-bottom: 0.75rem;
     text-align: center;
+
+    @include tablet {
+      width: 100%;
+      padding-bottom: 0;
+      padding: 1.5rem 0;
+    }
+
+    &:hover {
+      border-bottom: 0.25rem solid #fff;
+    }
 
     &--active {
       font-weight: 600;
@@ -34,6 +69,11 @@
   &__nav-link {
     text-decoration: none;
     color: $primary-color-white;
+    font-size: 0.875rem;
+
+    @include tablet {
+      vertical-align: middle;
+    }
 
     &--unselected {
       color: $secondary-color-mercury;
@@ -41,10 +81,18 @@
 
     &--padding-left {
       padding-left: 1rem;
+
+      @include tablet {
+        padding-left: 0;
+      }
     }
 
     &--padding-right {
       padding-right: 1rem;
+
+      @include tablet {
+        padding-right: 0;
+      }
     }
   }
 }
