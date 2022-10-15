@@ -1,0 +1,55 @@
+@use "../partials/global" as *;
+@use "../partials/fonts" as *;
+@use "../partials/variables" as *;
+@use "../partials/mixins" as *;
+
+.hero {
+  background-color: $primary-color-black;
+  background-image: url(../../assets/images/hero-bio.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 35vh;
+
+  @include tablet {
+    height: 80vh;
+  }
+
+  @include desktop {
+    width: 80rem;
+    margin: 0 auto;
+  }
+
+  &__container {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: rgba($color: $primary-color-black, $alpha: 0.5);
+
+    @include tablet {
+      padding: 0 2.25rem;
+    }
+
+    @include desktop {
+      padding: 0;
+    }
+  }
+}
+
+.hero__title {
+  font-size: $h1-mobile-size;
+  font-weight: 700;
+  line-height: 2rem;
+  opacity: 100%;
+  color: $primary-color-white;
+
+  @include tablet {
+    font-size: $h1-desk-tab-size;
+    line-height: 4.25rem;
+  }
+
+  @include desktop {
+    width: 63.75rem;
+    margin: 0 auto;
+  }
+}
