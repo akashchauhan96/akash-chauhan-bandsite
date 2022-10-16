@@ -52,12 +52,12 @@
     margin-bottom: 1rem;
 
     @include tablet {
-      width: calc(100% / 3 - 1vw);
+      width: calc(100% / 3 - 2vw);
       margin: 0;
     }
 
-    // @include desktop {
-    //   width: 31.766%;
-    // }
+    @include desktop {
+      width: calc(100% / 3 - 1vw);
+    }
   }
 }

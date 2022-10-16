@@ -350,7 +350,12 @@ main {
 }
 @media (min-width: 48rem) {
   .photo-gallery__img {
-    width: calc(33.3333333333% - 1vw);
+    width: calc(33.3333333333% - 2vw);
     margin: 0;
+  }
+}
+@media (min-width: 80rem) {
+  .photo-gallery__img {
+    width: calc(33.3333333333% - 1vw);
   }
 }/*# sourceMappingURL=bio.css.map */
