@@ -335,7 +335,12 @@ main {
   .photo-gallery__img-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 3vw;
+  }
+}
+@media (min-width: 80rem) {
+  .photo-gallery__img-container {
+    gap: 1.5vw;
   }
 }
 .photo-gallery__img {
@@ -345,12 +350,7 @@ main {
 }
 @media (min-width: 48rem) {
   .photo-gallery__img {
-    width: 31.035%;
+    width: calc(33.3333333333% - 1vw);
     margin: 0;
-  }
-}
-@media (min-width: 80rem) {
-  .photo-gallery__img {
-    width: 31.766%;
   }
 }/*# sourceMappingURL=bio.css.map */

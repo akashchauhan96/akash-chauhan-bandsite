@@ -38,7 +38,11 @@
     @include tablet {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
+      gap: 3vw;
+    }
+
+    @include desktop {
+      gap: 1.5vw;
     }
   }
 
@@ -48,12 +52,12 @@
     margin-bottom: 1rem;
 
     @include tablet {
-      width: 31.035%;
+      width: calc(100% / 3 - 1vw);
       margin: 0;
     }
 
-    @include desktop {
-      width: 31.766%;
-    }
+    // @include desktop {
+    //   width: 31.766%;
+    // }
   }
 }
