@@ -35,8 +35,10 @@
       margin: 0;
     }
   }
+}
 
-  &__nav-items {
+.nav {
+  &__items {
     display: flex;
     list-style: none;
 
@@ -45,7 +47,7 @@
     }
   }
 
-  &__nav-item {
+  &__item {
     width: 50%;
     padding-bottom: 0.75rem;
     text-align: center;
@@ -66,7 +68,7 @@
     }
   }
 
-  &__nav-link {
+  &__link {
     text-decoration: none;
     color: $primary-color-white;
     font-size: 0.875rem;
