@@ -17,6 +17,10 @@ main {
   margin: -0.04rem 0;
 }
 
+strong {
+  font-weight: 600;
+}
+
 @font-face {
   font-family: "AvenirNextLTPro";
   src: url(../../assets/font/AvenirNextLTPro-Regular.woff2), url(../../assets/font/AvenirNextLTPro-Regular.woff);
@@ -358,4 +362,118 @@ main {
   .photo-gallery__img {
     width: calc(33.3333333333% - 1vw);
   }
+}
+
+.footer {
+  background-color: #323232;
+  color: #fff;
+  font-size: 0.875rem;
+}
+.footer__outer-container {
+  padding: 1.5rem 1rem 1rem;
+}
+@media (min-width: 48rem) {
+  .footer__outer-container {
+    padding: 3rem 2.25rem 2.25rem;
+  }
+}
+@media (min-width: 80rem) {
+  .footer__outer-container {
+    width: 63.75rem;
+    padding: 3rem 0 2.25rem;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 48rem) {
+  .footer__inner-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 48rem) {
+  .footer__title-icon-container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+.footer__title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+@media (min-width: 48rem) {
+  .footer__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin-bottom: 0;
+    margin-right: 2.8vw;
+  }
+}
+@media (min-width: 80rem) {
+  .footer__title {
+    margin-right: 2.25rem;
+  }
+}
+.footer__icons-container {
+  display: flex;
+  gap: 2rem;
+}
+.footer__icons-img {
+  height: 1.25rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.footer__logo-img--hidden-mobile {
+  display: none;
+}
+@media (min-width: 48rem) {
+  .footer__logo-img--hidden-mobile {
+    display: block;
+  }
+}
+.footer__logo-img--hidden-tab {
+  margin: 3rem 0 1.5rem;
+}
+@media (min-width: 48rem) {
+  .footer__logo-img--hidden-tab {
+    display: none;
+  }
+}
+.footer__copyright {
+  font-size: 0.8125rem;
+}
+@media (min-width: 48rem) {
+  .footer__copyright {
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .contacts {
+    display: flex;
+  }
+}
+.contacts__info > * {
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 48rem) {
+  .contacts__info:first-of-type {
+    margin-right: 5vw;
+  }
+  .contacts__info:nth-of-type(2) {
+    margin-right: 8vw;
+  }
+}
+@media (min-width: 48rem) {
+  .contacts__info:first-of-type {
+    margin-right: 5%;
+  }
+  .contacts__info:nth-of-type(2) {
+    margin-right: 10%;
+  }
+}
+.contacts__name {
+  margin: 1.5rem 0 0;
 }/*# sourceMappingURL=bio.css.map */
