@@ -28,7 +28,7 @@
 
   &__logo {
     display: inline-block;
-    margin: 1.25rem 0 1.25rem;
+    margin: 1rem 0 1rem;
 
     @include tablet {
       display: block;
@@ -43,7 +43,12 @@
     list-style: none;
 
     @include tablet {
-      gap: 3rem;
+      gap: calc(71.04px - 3vw);
+      //This is used for gradually decrease the gap between the nav items for responsive behavior and getting it as close to 2 rem gap by the time it gets to the 1280px viewport size.
+    }
+
+    @include desktop {
+      gap: 2rem;
     }
   }
 

@@ -60,7 +60,7 @@ strong {
 }
 .header__logo {
   display: inline-block;
-  margin: 1.25rem 0 1.25rem;
+  margin: 1rem 0 1rem;
 }
 @media (min-width: 48rem) {
   .header__logo {
@@ -75,7 +75,12 @@ strong {
 }
 @media (min-width: 48rem) {
   .nav__items {
-    gap: 3rem;
+    gap: calc(71.04px - 3vw);
+  }
+}
+@media (min-width: 80rem) {
+  .nav__items {
+    gap: 2rem;
   }
 }
 .nav__item {
