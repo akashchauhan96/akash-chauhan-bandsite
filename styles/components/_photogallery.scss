@@ -42,7 +42,7 @@
     }
 
     @include desktop {
-      gap: 1.5vw;
+      gap: 1.5rem;
     }
   }
 
@@ -57,7 +57,7 @@
     }
 
     @include desktop {
-      width: calc(100% / 3 - 1vw);
+      width: 31.75%;
     }
   }
 }

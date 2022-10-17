@@ -354,7 +354,7 @@ strong {
 }
 @media (min-width: 80rem) {
   .photo-gallery__img-container {
-    gap: 1.5vw;
+    gap: 1.5rem;
   }
 }
 .photo-gallery__img {
@@ -370,7 +370,7 @@ strong {
 }
 @media (min-width: 80rem) {
   .photo-gallery__img {
-    width: calc(33.3333333333% - 1vw);
+    width: 31.75%;
   }
 }
 
