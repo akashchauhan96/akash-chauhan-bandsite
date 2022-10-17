@@ -75,7 +75,7 @@ strong {
 }
 @media (min-width: 48rem) {
   .nav__items {
-    gap: calc(71.04px - 3vw);
+    gap: 3rem;
   }
 }
 @media (min-width: 80rem) {

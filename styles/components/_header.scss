@@ -43,8 +43,7 @@
     list-style: none;
 
     @include tablet {
-      gap: calc(71.04px - 3vw);
-      //This is used for gradually decrease the gap between the nav items for responsive behavior and getting it as close to 2 rem gap by the time it gets to the 1280px viewport size.
+      gap: 3rem;
     }
 
     @include desktop {
