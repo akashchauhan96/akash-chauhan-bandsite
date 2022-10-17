@@ -107,6 +107,13 @@ strong {
   color: #fff;
   font-size: 0.875rem;
 }
+.nav__link:hover {
+  color: #fff;
+}
+.nav__link:active {
+  color: #fff;
+  font-weight: 600;
+}
 @media (min-width: 48rem) {
   .nav__link {
     vertical-align: middle;
