@@ -418,12 +418,12 @@ strong {
     font-size: 2.25rem;
     line-height: 2.75rem;
     margin-bottom: 0;
-    margin-right: 2.8vw;
+    margin-right: 1.6rem;
   }
 }
 @media (min-width: 80rem) {
   .footer__title {
-    margin-right: 2.25rem;
+    margin-right: 2.6rem;
   }
 }
 .footer__icons-container {
@@ -470,15 +470,18 @@ strong {
 }
 @media (min-width: 48rem) {
   .contacts__info:first-of-type {
-    margin-right: 5vw;
-  }
-}
-@media (min-width: 48rem) {
-  .contacts__info:first-of-type {
-    margin-right: 5%;
+    margin-right: 2.5rem;
   }
   .contacts__info:nth-of-type(2) {
-    margin-right: 10%;
+    margin-right: 4rem;
+  }
+}
+@media (min-width: 80rem) {
+  .contacts__info:first-of-type {
+    margin-right: 3.5rem;
+  }
+  .contacts__info:nth-of-type(2) {
+    margin-right: 5.5rem;
   }
 }
 .contacts__name {

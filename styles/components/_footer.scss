@@ -47,11 +47,11 @@
       font-size: 2.25rem;
       line-height: 2.75rem;
       margin-bottom: 0;
-      margin-right: 2.8vw;
+      margin-right: 1.6rem;
     }
 
     @include desktop {
-      margin-right: 2.25rem;
+      margin-right: 2.6rem;
     }
   }
 
@@ -99,23 +99,24 @@
     & > * {
       margin-bottom: 1.5rem;
     }
-    @include tablet {
-      &:first-of-type {
-        margin-right: 5vw;
-      }
-
-      // &:nth-of-type(2) {
-      //   margin-right: 8vw;
-      // }
-    }
 
     @include tablet {
       &:first-of-type {
-        margin-right: 5%;
+        margin-right: 2.5rem;
       }
 
       &:nth-of-type(2) {
-        margin-right: 10%;
+        margin-right: 4rem;
+      }
+    }
+
+    @include desktop {
+      &:first-of-type {
+        margin-right: 3.5rem;
+      }
+
+      &:nth-of-type(2) {
+        margin-right: 5.5rem;
       }
     }
   }
