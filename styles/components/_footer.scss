@@ -65,7 +65,7 @@
     object-fit: contain;
   }
 
-  &__logo-img--hidden-mobile {
+  &__logo--hidden-mobile {
     display: none;
 
     @include tablet {
@@ -73,7 +73,7 @@
     }
   }
 
-  &__logo-img--hidden-tab {
+  &__logo--hidden-tab {
     margin: 3rem 0 1.5rem;
 
     @include tablet {
