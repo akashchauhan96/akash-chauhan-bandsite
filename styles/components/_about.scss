@@ -24,8 +24,9 @@
   &__title {
     font-size: $h2-mobile-size;
     margin-bottom: 1rem;
-    line-height: 2rem;
+    line-height: 1.5rem;
     font-weight: 600;
+    //Set line height to to 1.5 as it resembles the mockup more closely instead of using line heights provided in style guides
 
     @include tablet {
       font-size: $h2-desk-tab-size;
@@ -51,7 +52,7 @@
     margin-bottom: 1rem;
     object-fit: cover;
     vertical-align: bottom;
-    //Get rid of white space below image
+    //Get rid of white space below image by applying vertical-align: bottom;
 
     @include tablet {
       margin-bottom: 2.25rem;

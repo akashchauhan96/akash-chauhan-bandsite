@@ -211,7 +211,7 @@ strong {
 .about__title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  line-height: 2rem;
+  line-height: 1.5rem;
   font-weight: 600;
 }
 @media (min-width: 48rem) {
@@ -378,6 +378,7 @@ strong {
   background-color: #323232;
   color: #fff;
   font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 .footer__outer-container {
   padding: 1.5rem 1rem 1rem;
