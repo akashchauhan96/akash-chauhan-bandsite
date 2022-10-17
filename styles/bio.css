@@ -137,16 +137,12 @@ strong {
   background-image: url(../../assets/images/hero-bio.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 35vh;
-}
-@media (min-width: 48rem) {
-  .hero {
-    height: 80vh;
-  }
+  height: 60vw;
 }
 @media (min-width: 80rem) {
   .hero {
-    width: 80rem;
+    max-height: 48rem;
+    max-width: 80rem;
     margin: 0 auto;
   }
 }
@@ -165,12 +161,13 @@ strong {
 @media (min-width: 80rem) {
   .hero__container {
     padding: 0;
+    max-height: 48rem;
   }
 }
 
 .hero__title {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 2rem;
   opacity: 100%;
   color: #fff;

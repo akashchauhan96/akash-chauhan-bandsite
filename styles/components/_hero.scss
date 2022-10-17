@@ -8,14 +8,11 @@
   background-image: url(../../assets/images/hero-bio.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 35vh;
-
-  @include tablet {
-    height: 80vh;
-  }
+  height: 60vw;
 
   @include desktop {
-    width: 80rem;
+    max-height: 48rem;
+    max-width: 80rem;
     margin: 0 auto;
   }
 
@@ -32,13 +29,14 @@
 
     @include desktop {
       padding: 0;
+      max-height: 48rem;
     }
   }
 }
 
 .hero__title {
   font-size: $h1-mobile-size;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 2rem;
   opacity: 100%;
   color: $primary-color-white;
