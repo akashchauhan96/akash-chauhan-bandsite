@@ -25,6 +25,7 @@
     font-size: $h2-mobile-size;
     margin-bottom: 1rem;
     line-height: 2rem;
+    font-weight: 600;
 
     @include tablet {
       font-size: $h2-desk-tab-size;
@@ -45,17 +46,20 @@
   }
 
   &__band-img {
+    height: 60vw;
     width: 100%;
     margin-bottom: 1rem;
+    object-fit: cover;
+    vertical-align: bottom;
+    //Get rid of white space below image
 
     @include tablet {
       margin-bottom: 2.25rem;
-      height: 49vh;
-      object-fit: cover;
+      height: 42vw;
     }
 
     @include desktop {
-      height: 47vh;
+      height: 36vw;
     }
   }
 

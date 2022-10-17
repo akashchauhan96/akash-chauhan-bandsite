@@ -208,6 +208,7 @@ strong {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   line-height: 2rem;
+  font-weight: 600;
 }
 @media (min-width: 48rem) {
   .about__title {
@@ -228,20 +229,22 @@ strong {
   }
 }
 .about__band-img {
+  height: 60vw;
   width: 100%;
   margin-bottom: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: bottom;
 }
 @media (min-width: 48rem) {
   .about__band-img {
     margin-bottom: 2.25rem;
-    height: 49vh;
-    -o-object-fit: cover;
-       object-fit: cover;
+    height: 42vw;
   }
 }
 @media (min-width: 80rem) {
   .about__band-img {
-    height: 47vh;
+    height: 36vw;
   }
 }
 .about__vocalist-testimonial {
