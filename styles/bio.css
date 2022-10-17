@@ -142,8 +142,12 @@ strong {
 @media (min-width: 80rem) {
   .hero {
     max-height: 48rem;
-    max-width: 80rem;
     margin: 0 auto;
+  }
+}
+@media (min-width: 120rem) {
+  .hero {
+    max-width: 120rem;
   }
 }
 .hero__container {

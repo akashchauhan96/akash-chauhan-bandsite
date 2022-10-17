@@ -12,8 +12,11 @@
 
   @include desktop {
     max-height: 48rem;
-    max-width: 80rem;
     margin: 0 auto;
+  }
+
+  @include large-desktop {
+    max-width: 120rem;
   }
 
   &__container {
