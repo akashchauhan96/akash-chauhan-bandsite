@@ -1,136 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shows</title>
-    <link rel="stylesheet" href="../styles/shows.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__container">
-        <div class="header__img-container">
-          <a href="./index.html" class="header__logo-link">
-            <img
-              src="../assets/logo/Logo-bandsite.svg"
-              alt="Bandsite Logo"
-              class="header__logo"
-            />
-          </a>
-          <!--The syntax continues to be a problem in html for some reason. The closing tag jumps on a new line. I have not been able to fix this-->
-        </div>
-        <nav class="nav">
-          <ul class="nav__items">
-            <li class="nav__item nav__item--active nav__link--padding-left">
-              <a href="./index.html" class="nav__link">Biography</a>
-            </li>
-            <li class="nav__item nav__link--padding-right">
-              <a href="./index.html" class="nav__link nav__link--unselected">
-                Shows
-              </a>
-            </li>
-          </ul>
-        </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shows</title>
+  <link rel="stylesheet" href="../styles/shows.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container">
+      <div class="header__img-container">
+        <a href="./index.html" class="header__logo-link">
+          <img src="../assets/logo/Logo-bandsite.svg" alt="Bandsite Logo" class="header__logo" />
+        </a>
+        <!--The syntax continues to be a problem in html for some reason. The closing tag jumps on a new line. I have not been able to fix this-->
       </div>
-    </header>
-    <main></main>
-    <footer class="footer">
-      <div class="footer__outer-container">
-        <div class="footer__inner-container">
-          <div class="footer__title-icon-container">
-            <h2 class="footer__title">Get in Touch</h2>
-            <div class="footer__icons-container">
-              <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                class="footer__icons-link"
-              >
-                <img
-                  src="../assets/icons/SVG/Icon-instagram.svg"
-                  alt="instagram icon"
-                  class="footer__icons-img"
-                />
-              </a>
-              <a
-                href="https://www.facebook.com/"
-                target="_blank"
-                class="footer__icons-link"
-              >
-                <img
-                  src="../assets/icons/SVG/Icon-facebook.svg"
-                  alt="facebook icon"
-                  class="footer__icons-img"
-                />
-              </a>
-              <a
-                href="https://www.twitter.com/"
-                target="_blank"
-                class="footer__icons-link"
-              >
-                <img
-                  src="../assets/icons/SVG/Icon-twitter.svg"
-                  alt="twitter icon"
-                  class="footer__icons-img"
-                />
-              </a>
-            </div>
+      <nav class="nav">
+        <ul class="nav__items">
+          <li class="nav__item nav__item--active nav__link--padding-left">
+            <a href="./index.html" class="nav__link">Biography</a>
+          </li>
+          <li class="nav__item nav__link--padding-right">
+            <a href="./index.html" class="nav__link nav__link--unselected">
+              Shows
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero__container">
+        <div class="hero__content-container">
+          <div class="hero__album-container">
+            <h2 class="hero__album-name">Beautiful Beasts Album</h2>
+            <h1 class="hero__artist-names">Queen of Yellow x For The Stings</h1>
           </div>
-          <a href="./index.html" class="footer__logo-link">
-            <img
-              src="./assets/logo/Logo-bandsite.svg"
-              alt="logo"
-              class="footer__logo--hidden-mobile"
-            />
-          </a>
+          <iframe scrolling="no" frameborder="no" allow="autoplay" class="hero__soundcloud-song"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/94269404&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+                </div>
         </div>
-        <div class="contacts">
-          <article class="contacts__info">
-            <p class="contacts__name"><strong>Cam Adams</strong></p>
-            <p class="contacts__company">
-              <strong>The Bees Knees Management</strong>
-            </p>
-            <p class="contacts__agent-location">
-              503 Broadway Penthouse,
-              <br />
-              New York, NY 10012, USA
-            </p>
-            <p class="contacts__email">info@thebeesknees.com</p>
-          </article>
-          <article class="contacts__info">
-            <p class="contacts__name"><strong>Pearl Gregg</strong></p>
-            <p class="contacts__company">
-              <strong>Limitless Artist Group</strong>
-            </p>
-            <p class="contacts__agent-location">
-              Booking Agent for
-              <br />
-              US / South America / Japan
-            </p>
-            <p class="contacts__email">pearl.gregg@limitlessag.com</p>
-          </article>
-          <article class="contacts__info">
-            <p class="contacts__name"><strong>Carson Whyte</strong></p>
-            <p class="contacts__company"><strong>ARCH Entertainment</strong></p>
-            <p class="contacts__agent-location">
-              Booking Agent for
-              <br />
-              UK / EU / AU
-            </p>
-            <p class="contacts__email">cwhyte@archentertainment.com</p>
-          </article>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__outer-container">
+      <div class="footer__inner-container">
+        <div class="footer__title-icon-container">
+          <h2 class="footer__title">Get in Touch</h2>
+          <div class="footer__icons-container">
+            <a href="https://www.instagram.com/" target="_blank" class="footer__icons-link">
+              <img src="../assets/icons/SVG/Icon-instagram.svg" alt="instagram icon" class="footer__icons-img" />
+            </a>
+            <a href="https://www.facebook.com/" target="_blank" class="footer__icons-link">
+              <img src="../assets/icons/SVG/Icon-facebook.svg" alt="facebook icon" class="footer__icons-img" />
+            </a>
+            <a href="https://www.twitter.com/" target="_blank" class="footer__icons-link">
+              <img src="../assets/icons/SVG/Icon-twitter.svg" alt="twitter icon" class="footer__icons-img" />
+            </a>
+          </div>
         </div>
         <a href="./index.html" class="footer__logo-link">
-          <img
-            src="../assets/logo/Logo-bandsite.svg"
-            alt="logo"
-            class="footer__logo--hidden-tab"
-          />
+          <img src="./assets/logo/Logo-bandsite.svg" alt="logo" class="footer__logo--hidden-mobile" />
         </a>
-        <p class="footer__copyright">
-          Copyright The Bees Knees © 2021 All Rights Reserved
-        </p>
       </div>
-    </footer>
-  </body>
+      <div class="contacts">
+        <article class="contacts__info">
+          <p class="contacts__name"><strong>Cam Adams</strong></p>
+          <p class="contacts__company">
+            <strong>The Bees Knees Management</strong>
+          </p>
+          <p class="contacts__agent-location">
+            503 Broadway Penthouse,
+            <br />
+            New York, NY 10012, USA
+          </p>
+          <p class="contacts__email">info@thebeesknees.com</p>
+        </article>
+        <article class="contacts__info">
+          <p class="contacts__name"><strong>Pearl Gregg</strong></p>
+          <p class="contacts__company">
+            <strong>Limitless Artist Group</strong>
+          </p>
+          <p class="contacts__agent-location">
+            Booking Agent for
+            <br />
+            US / South America / Japan
+          </p>
+          <p class="contacts__email">pearl.gregg@limitlessag.com</p>
+        </article>
+        <article class="contacts__info">
+          <p class="contacts__name"><strong>Carson Whyte</strong></p>
+          <p class="contacts__company"><strong>ARCH Entertainment</strong></p>
+          <p class="contacts__agent-location">
+            Booking Agent for
+            <br />
+            UK / EU / AU
+          </p>
+          <p class="contacts__email">cwhyte@archentertainment.com</p>
+        </article>
+      </div>
+      <a href="./index.html" class="footer__logo-link">
+        <img src="../assets/logo/Logo-bandsite.svg" alt="logo" class="footer__logo--hidden-tab" />
+      </a>
+      <p class="footer__copyright">
+        Copyright The Bees Knees © 2021 All Rights Reserved
+      </p>
+    </div>
+  </footer>
+</body>
+
 </html>
