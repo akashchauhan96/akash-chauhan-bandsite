@@ -1,0 +1,236 @@
+@use "../partials/fonts" as *;
+@use "../partials/global" as *;
+@use "../partials/mixins" as *;
+@use "../partials/variables" as *;
+
+.shows-table {
+  background-color: $primary-color-white;
+  padding: 2rem 1rem 1rem;
+  border-bottom: 2px solid black;
+
+  @include tablet {
+    padding: 3rem 0.75rem 0.5rem;
+    border-bottom: none;
+  }
+
+  @include desktop {
+    padding: 3rem 0 2.25rem;
+  }
+
+  &__container {
+    @include tablet {
+      border-bottom: 2px solid greenyellow;
+    }
+
+    @include desktop {
+      width: 63.75rem;
+      display: flex;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      align-items: baseline;
+      border-bottom: none;
+    }
+  }
+
+  &__title {
+    font-size: $h2-mobile-size;
+    line-height: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: $secondary-color-darkblack;
+
+    @include tablet {
+      font-size: $h2-desk-tab-size;
+      line-height: 2.75rem;
+      margin-left: 1.5rem;
+    }
+
+    @include desktop {
+      width: 7rem;
+      margin: 0;
+    }
+  }
+}
+
+.tickets {
+  @include tablet {
+    display: flex;
+    padding-bottom: 1rem;
+    margin: 0 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    width: 49.75rem;
+    margin: 2rem 0 0 14rem;
+    padding: 0 1.5rem 1rem;
+    border-bottom: 2px solid greenyellow;
+  }
+
+  &__column-headings {
+    @include tablet {
+      display: flex;
+    }
+
+    &--hide-mobile {
+      display: none;
+
+      @include tablet {
+        display: flex;
+        margin: 0 1.5rem;
+        justify-content: space-between;
+      }
+
+      @include desktop {
+        margin: 0 0 0 7rem;
+        align-items: flex-end;
+        width: 49.75rem;
+        padding: 0 1.5rem;
+      }
+    }
+  }
+
+  &__date-title {
+    font-size: $p-mobile-size;
+    text-transform: uppercase;
+    line-height: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: $primary-color-silver;
+
+    @include tablet {
+      margin-bottom: 2.25rem;
+      width: 25%;
+    }
+
+    &--hide-tablet {
+      @include tablet {
+        display: none;
+      }
+    }
+
+    @include desktop {
+      margin: 0;
+    }
+  }
+
+  &__date {
+    font-size: 1rem;
+    color: $primary-color-black;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.25;
+
+    @include tablet {
+      margin: 0;
+      width: 25%;
+    }
+  }
+
+  &__venue-title {
+    font-size: $p-mobile-size;
+    text-transform: uppercase;
+    line-height: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: $primary-color-silver;
+
+    @include tablet {
+      margin-bottom: 2.25rem;
+      width: 25%;
+    }
+
+    &--hide-tablet {
+      @include tablet {
+        display: none;
+      }
+    }
+
+    @include desktop {
+      margin: 0;
+    }
+  }
+
+  &__venue {
+    font-size: 1rem;
+    color: $primary-color-black;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    line-height: 1.25;
+
+    @include tablet {
+      margin: 0;
+      width: 25%;
+    }
+  }
+
+  &__location-title {
+    font-size: $p-mobile-size;
+    text-transform: uppercase;
+    line-height: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: $primary-color-silver;
+
+    @include tablet {
+      margin-bottom: 2.25rem;
+      width: 25%;
+    }
+
+    &--hide-tablet {
+      @include tablet {
+        display: none;
+      }
+    }
+
+    @include desktop {
+      margin: 0;
+    }
+  }
+
+  &__location {
+    font-size: 1rem;
+    color: $primary-color-black;
+    font-weight: 400;
+    line-height: 1.25;
+
+    @include tablet {
+      width: 25%;
+    }
+  }
+
+  &__buy-button {
+    font-size: 1rem;
+    color: $primary-color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.625rem 2rem;
+    background-color: $primary-color-black;
+    font-weight: 600;
+    line-height: 1.25;
+    border-radius: 0.25rem;
+    width: 100%;
+    border: none;
+    min-width: 9.375rem;
+    height: 2.5rem;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    margin: 1.5rem 0 0;
+
+    &--visibility-hidden {
+      display: none;
+      @include tablet {
+        display: block;
+        visibility: hidden;
+      }
+    }
+
+    @include tablet {
+      width: auto;
+      margin: 0;
+      align-self: flex-end;
+    }
+  }
+}

@@ -329,4 +329,241 @@ strong {
   .hero__soundcloud-song {
     height: 9rem;
   }
+}
+
+.shows-table {
+  background-color: #fff;
+  padding: 2rem 1rem 1rem;
+  border-bottom: 2px solid black;
+}
+@media (min-width: 48rem) {
+  .shows-table {
+    padding: 3rem 0.75rem 0.5rem;
+    border-bottom: none;
+  }
+}
+@media (min-width: 80rem) {
+  .shows-table {
+    padding: 3rem 0 2.25rem;
+  }
+}
+@media (min-width: 48rem) {
+  .shows-table__container {
+    border-bottom: 2px solid greenyellow;
+  }
+}
+@media (min-width: 80rem) {
+  .shows-table__container {
+    width: 63.75rem;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-bottom: none;
+  }
+}
+.shows-table__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #000;
+}
+@media (min-width: 48rem) {
+  .shows-table__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin-left: 1.5rem;
+  }
+}
+@media (min-width: 80rem) {
+  .shows-table__title {
+    width: 7rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 48rem) {
+  .tickets {
+    display: flex;
+    padding-bottom: 1rem;
+    margin: 0 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 80rem) {
+  .tickets {
+    width: 49.75rem;
+    margin: 2rem 0 0 14rem;
+    padding: 0 1.5rem 1rem;
+    border-bottom: 2px solid greenyellow;
+  }
+}
+@media (min-width: 48rem) {
+  .tickets__column-headings {
+    display: flex;
+  }
+}
+.tickets__column-headings--hide-mobile {
+  display: none;
+}
+@media (min-width: 48rem) {
+  .tickets__column-headings--hide-mobile {
+    display: flex;
+    margin: 0 1.5rem;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 80rem) {
+  .tickets__column-headings--hide-mobile {
+    margin: 0 0 0 7rem;
+    align-items: flex-end;
+    width: 49.75rem;
+    padding: 0 1.5rem;
+  }
+}
+.tickets__date-title {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  line-height: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #afafaf;
+}
+@media (min-width: 48rem) {
+  .tickets__date-title {
+    margin-bottom: 2.25rem;
+    width: 25%;
+  }
+}
+@media (min-width: 48rem) {
+  .tickets__date-title--hide-tablet {
+    display: none;
+  }
+}
+@media (min-width: 80rem) {
+  .tickets__date-title {
+    margin: 0;
+  }
+}
+.tickets__date {
+  font-size: 1rem;
+  color: #323232;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+@media (min-width: 48rem) {
+  .tickets__date {
+    margin: 0;
+    width: 25%;
+  }
+}
+.tickets__venue-title {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  line-height: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #afafaf;
+}
+@media (min-width: 48rem) {
+  .tickets__venue-title {
+    margin-bottom: 2.25rem;
+    width: 25%;
+  }
+}
+@media (min-width: 48rem) {
+  .tickets__venue-title--hide-tablet {
+    display: none;
+  }
+}
+@media (min-width: 80rem) {
+  .tickets__venue-title {
+    margin: 0;
+  }
+}
+.tickets__venue {
+  font-size: 1rem;
+  color: #323232;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+@media (min-width: 48rem) {
+  .tickets__venue {
+    margin: 0;
+    width: 25%;
+  }
+}
+.tickets__location-title {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  line-height: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #afafaf;
+}
+@media (min-width: 48rem) {
+  .tickets__location-title {
+    margin-bottom: 2.25rem;
+    width: 25%;
+  }
+}
+@media (min-width: 48rem) {
+  .tickets__location-title--hide-tablet {
+    display: none;
+  }
+}
+@media (min-width: 80rem) {
+  .tickets__location-title {
+    margin: 0;
+  }
+}
+.tickets__location {
+  font-size: 1rem;
+  color: #323232;
+  font-weight: 400;
+  line-height: 1.25;
+}
+@media (min-width: 48rem) {
+  .tickets__location {
+    width: 25%;
+  }
+}
+.tickets__buy-button {
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.625rem 2rem;
+  background-color: #323232;
+  font-weight: 600;
+  line-height: 1.25;
+  border-radius: 0.25rem;
+  width: 100%;
+  border: none;
+  min-width: 9.375rem;
+  height: 2.5rem;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin: 1.5rem 0 0;
+}
+.tickets__buy-button--visibility-hidden {
+  display: none;
+}
+@media (min-width: 48rem) {
+  .tickets__buy-button--visibility-hidden {
+    display: block;
+    visibility: hidden;
+  }
+}
+@media (min-width: 48rem) {
+  .tickets__buy-button {
+    width: auto;
+    margin: 0;
+    align-self: flex-end;
+  }
 }/*# sourceMappingURL=shows.css.map */
