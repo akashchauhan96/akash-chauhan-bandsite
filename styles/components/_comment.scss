@@ -1,0 +1,220 @@
+@use "../partials/fonts" as *;
+@use "../partials/global" as *;
+@use "../partials/mixins" as *;
+@use "../partials/variables" as *;
+
+.comment-section {
+  background-color: $primary-color-white;
+  padding: 1.5rem 1rem 1rem;
+
+  @include tablet {
+    padding: 3rem 2.25rem 2.25rem;
+  }
+
+  @include desktop {
+    padding: 3rem 0 2.25rem;
+  }
+
+  &__container {
+    @include desktop {
+      width: 63.75rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    color: $primary-color-black;
+    font-size: $h2-mobile-size;
+    margin-bottom: 1rem;
+    font-weight: 600;
+
+    @include tablet {
+      margin-bottom: 2.25rem;
+      font-size: $h2-desk-tab-size;
+    }
+  }
+
+  &__image-comment-wrapper {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 1px solid $secondary-color-mercury;
+
+    @include tablet {
+      margin: 0 3.75rem;
+    }
+
+    @include desktop {
+      margin: 0 16rem;
+    }
+  }
+
+  &__avatar-container {
+    max-width: 2.25rem;
+    height: 2.25rem;
+    margin-top: 1.375rem;
+
+    @include tablet {
+      max-width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &__avatar-image {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: left;
+  }
+}
+
+.comment-form {
+  width: 100%;
+
+  &__name-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    gap: 0.25rem;
+  }
+
+  &__name-label {
+    font-size: $p-mobile-size;
+    text-transform: uppercase;
+    line-height: 1.125rem;
+    font-weight: 600;
+    color: $primary-color-silver;
+  }
+
+  &__name {
+    font-family: "AvenirNextLTPro";
+    max-height: 2.25rem;
+    padding: 0.75rem;
+    background-color: $secondary-color-alabaster;
+    border: 1px solid $secondary-color-mercury;
+
+    &::placeholder {
+      font-size: 0.875rem;
+      color: $secondary-color-darkblack;
+    }
+
+    @include tablet {
+      max-height: 3rem;
+      padding: 1rem;
+    }
+  }
+
+  &__comment-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    gap: 0.25rem;
+  }
+
+  &__comment-label {
+    font-size: $p-mobile-size;
+    text-transform: uppercase;
+    line-height: 1.125rem;
+    font-weight: 600;
+    color: $primary-color-silver;
+  }
+
+  &__comment {
+    font-family: "AvenirNextLTPro";
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    height: 6rem;
+    background-color: $secondary-color-alabaster;
+    border: 1px solid $secondary-color-mercury;
+    border-radius: 0.25rem;
+    resize: none;
+
+    &::placeholder {
+      font-size: 0.875rem;
+      color: $secondary-color-darkblack;
+    }
+
+    @include tablet {
+      padding: 1rem;
+    }
+  }
+
+  &__button {
+    font-size: 1rem;
+    color: $primary-color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.625rem 2rem;
+    background-color: $primary-color-black;
+    font-weight: 600;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    width: 100%;
+    border: none;
+    min-width: 9.375rem;
+    height: 2.5rem;
+    margin-bottom: 1.5rem;
+
+    @include tablet {
+      display: block;
+      width: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+.comment-array {
+  background-color: $primary-color-white;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid $secondary-color-mercury;
+
+  @include tablet {
+    padding: 1.5rem 0;
+    margin: 0 3.75rem;
+  }
+
+  @include desktop {
+    margin: 0 24.125rem;
+  }
+
+  &__avatar-container {
+    width: 2.25rem;
+    height: 2.25rem;
+    background-color: $secondary-color-mercury;
+    border-radius: 50%;
+
+    @include tablet {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &__container-no-image {
+    flex: 1;
+  }
+
+  &__name-date-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  &__name {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  &__date {
+    font-size: 0.875rem;
+    color: $secondary-color-mercury;
+    font-weight: 600;
+  }
+
+  &__comment {
+    width: auto;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
