@@ -128,6 +128,7 @@ function automateCreateElement(variable, className, articleEl, content) {
   }
 }
 
+//SECTION BELOW IS FOR THE RAW HTML STRUCTURE
 /* <section class="shows-table">
 <div class="shows-table__container">
   <h2 class="shows-table__title">Shows</h2>
