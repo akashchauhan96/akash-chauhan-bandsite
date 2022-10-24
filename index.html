@@ -148,7 +148,7 @@
                 class="comment-section__avatar-image"
               />
             </div>
-            <form action="#" class="comment-form">
+            <form action="#" class="comment-form" id="form">
               <div class="comment-form__name-field">
                 <label for="name" class="comment-form__name-label">Name</label>
                 <input
@@ -170,32 +170,16 @@
                   placeholder="Add a new comment"
                 ></textarea>
               </div>
-              <button
-                type="submit"
-                value="submit comment"
-                class="comment-form__button"
-              >
+              <button type="submit" class="comment-form__button">
                 Comment
               </button>
+              <!-- <p class="comment-form__error">
+                *All sections need to be filled out!
+              </p> -->
             </form>
           </div>
         </div>
-        <!-- <article class="comment-array">
-          <div class="comment-array__avatar-container">
-          </div>
-          <div class="comment-array__container-no-image">
-            <div class="comment-array__name-date-wrapper">
-              <p class="comment-array__name">Connor Walton</p>
-              <p class="comment-array__date">02/17/2021</p>
-            </div>
-            <p class="comment-array__comment">
-              This is art. This is inexplicable magic expressed in the purest
-              way, everything that makes up this majestic work deserves
-              reverence. Let us appreciate this for what it is and what it
-              contains.
-            </p>
-          </div>
-        </article> -->
+        <div class="comment-array"></div>
       </section>
     </main>
     <footer class="footer">

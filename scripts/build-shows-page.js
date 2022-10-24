@@ -66,7 +66,7 @@ function generateShowSchedule(showList) {
       "tickets__date-title--hide-tablet",
       articleEl
     );
-    // console.log(showList[0].date[i]);
+
     automateCreateElement(
       "none",
       "tickets__date",

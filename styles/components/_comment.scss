@@ -98,6 +98,11 @@
       color: $secondary-color-darkblack;
     }
 
+    &--active {
+      background-color: white;
+      border: 1px solid $secondary-color-darkblack;
+    }
+
     @include tablet {
       max-height: 3rem;
       padding: 1rem;
@@ -134,6 +139,11 @@
       color: $secondary-color-darkblack;
     }
 
+    &--active {
+      background-color: white;
+      border: 1px solid $secondary-color-darkblack;
+    }
+
     @include tablet {
       padding: 1rem;
     }
@@ -161,22 +171,36 @@
       margin-left: auto;
     }
   }
+
+  &__error {
+    font-size: 0.875rem;
+    color: red;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .comment-array {
   background-color: $primary-color-white;
-  display: flex;
-  gap: 1rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid $secondary-color-mercury;
 
   @include tablet {
-    padding: 1.5rem 0;
     margin: 0 3.75rem;
   }
 
   @include desktop {
-    margin: 0 24.125rem;
+    width: 63.75rem;
+    margin: 0 auto;
+  }
+
+  &__container {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid $secondary-color-mercury;
+
+    @include desktop {
+      margin: 0 16rem;
+    }
   }
 
   &__avatar-container {
