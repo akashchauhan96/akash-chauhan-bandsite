@@ -75,24 +75,53 @@ formEl.addEventListener("submit", (e) => {
   let name = e.target.name.value;
   let comment = e.target.comment.value;
 
+  if (name === "" && comment === "") {
+    const nameError = document.querySelector("#name");
+    const commentError = document.querySelector("#comment");
+    nameError.classList.add("comment-form__name--error");
+    commentError.classList.add("comment-form__comment--error");
+    return;
+  }
+
+  if (name === "") {
+    const nameError = document.querySelector("#name");
+    nameError.classList.add("comment-form__name--error");
+    return;
+  }
+
+  if (comment === "") {
+    const commentError = document.querySelector("#comment");
+    commentError.classList.add("comment-form__comment--error");
+    return;
+  }
+
+  else {
+    const nameError = document.querySelector("#name");
+    const commentError = document.querySelector("#comment");
+    nameError.classList.remove("comment-form__name--error");
+    commentError.classList.remove("comment-form__comment--error");
+  }
+
   const newObjectComment = {
     name: name,
     date: dateGenerator(new Date()),
     comment: comment,
   };
 
+  //Remove the class the highlights the field in red
+  
   //The two lines of code below clear the input fields
   e.target.name.value = "";
   e.target.comment.value = "";
-
+  
   //Render a new "empty" comment list
   const newCommentArrayEl = document.querySelector(".comment-array");
   newCommentArrayEl.innerHTML = "";
   displayComment(newCommentArrayEl);
-
+  
   //Populate the first index of the existing array with the new object you generated after gathering name and comment info of the new user
   comments.unshift(newObjectComment);
-
+  
   //Run the function again and see the magic happen!!!!!!
   displayComment(comments);
 });

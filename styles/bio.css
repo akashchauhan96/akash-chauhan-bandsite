@@ -602,6 +602,9 @@ strong {
   background-color: white;
   border: 1px solid #000;
 }
+.comment-form__name--error {
+  border-color: #d22d2d;
+}
 @media (min-width: 48rem) {
   .comment-form__name {
     max-height: 3rem;
@@ -646,6 +649,9 @@ strong {
 .comment-form__comment--active {
   background-color: white;
   border: 1px solid #000;
+}
+.comment-form__comment--error {
+  border-color: #d22d2d;
 }
 @media (min-width: 48rem) {
   .comment-form__comment {
