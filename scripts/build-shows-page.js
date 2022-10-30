@@ -10,14 +10,9 @@ axios
     //Call this function to generate the Title for all viewports and headings of the shows table which will only be displayed on tablet and desktop viewports
     const responseData = response.data;
     showTitleAndHeadings();
-    // console.log(responseData);
     responseData.forEach((showItem) => {
       generateShowSchedule(showItem);
-      // console.log(showItem);
     });
-    const showsContainerEl = document.querySelector(".shows-table__container");
-    // eventListener(showsContainerEl);
-    
   })
   .catch((err) => {
     console.log(err);
