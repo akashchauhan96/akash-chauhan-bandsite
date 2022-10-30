@@ -31,6 +31,8 @@ function showTitleAndHeadings() {
   const showsContainerEl = document.createElement("div");
   showsContainerEl.classList.add("shows-table__container");
   sectionEl.appendChild(showsContainerEl);
+
+  // eventListener(showsContainerEl);
   
   const showsTitleEl = document.createElement("h2");
   showsTitleEl.classList.add("shows-table__title");
@@ -78,7 +80,7 @@ function generateShowSchedule(showList) {
   articleEl.classList.add("tickets");
   showsContainerEl.appendChild(articleEl);
 
-  // eventListener(articleEl);
+  eventListener(articleEl);
 
   const dateTitleEl = document.createElement('p');
   dateTitleEl.classList.add("tickets__date-title", "tickets__date-title--hide-tablet");
@@ -117,6 +119,17 @@ function generateShowSchedule(showList) {
   articleEl.appendChild(buttonEl);
 }
 
+function eventListener(singleShow) {
+  console.log(singleShow);
+  singleShow.addEventListener("mouseover", () => {
+    singleShow.classList.add('tickets--hover')
+  });
+
+  singleShow.addEventListener("mouseout", () => {
+    singleShow.classList.remove("tickets--hover");
+  });
+}
+
 //   <article class="tickets">
 //   <p class="tickets__date-title tickets__date-title--hide-tablet">
 //     Date
@@ -134,24 +147,3 @@ function generateShowSchedule(showList) {
 //   <p class="tickets__location">San Francisco, CA</p>
 //   <a href="./index.html" class="tickets__buy-button">Buy Tickets</a>
 // </article>
-
-
-
-// function automateCreateElement(variable, className, articleEl, content) {
-//   if (content === undefined && variable != buttonEl) {
-//     let variableCopy = elementCopy(variable);
-//     variableCopy.classList.add(className);
-//     articleEl.appendChild(variableCopy);
-//     console.log(variableCopy);
-//   } else if (variable === "none") {
-//     let item = document.createElement("p");
-//     item.classList.add(className);
-//     articleEl.appendChild(item);
-//     item.innerText = content;
-//     console.log(item);
-//   } else {
-//     let variableCopy = elementCopy(variable);
-//     variableCopy.classList.remove(className);
-//     articleEl.appendChild(variableCopy);
-//   }
-// }
