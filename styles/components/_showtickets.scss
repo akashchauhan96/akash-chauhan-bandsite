@@ -67,6 +67,10 @@
     padding: 1rem 1.5rem;
   }
 
+  &--hover {
+    background-color: $secondary-color-alabaster;
+  }
+
   &__column-headings {
     @include tablet {
       display: flex;

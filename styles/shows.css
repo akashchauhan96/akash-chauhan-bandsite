@@ -399,6 +399,9 @@ strong {
     padding: 1rem 1.5rem;
   }
 }
+.tickets--hover {
+  background-color: #fafafa;
+}
 @media (min-width: 48rem) {
   .tickets__column-headings {
     display: flex;
