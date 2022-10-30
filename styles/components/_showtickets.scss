@@ -9,7 +9,7 @@
   border-bottom: 2px solid black;
 
   @include tablet {
-    padding: 3rem 1rem 0.5rem;
+    padding: 3rem 1rem 2.25rem;
     border-bottom: none;
   }
 
@@ -55,7 +55,7 @@
 
   @include tablet {
     display: flex;
-    padding: 1.5rem 1.125rem;
+    padding: 1rem 1.125rem;
     margin: 0;
     align-items: center;
     justify-content: space-between;
@@ -85,7 +85,7 @@
 
       @include tablet {
         display: flex;
-        margin: 0 1.125rem;
+        margin: 0 1.125rem 0.5rem;
         justify-content: space-between;
       }
 
@@ -107,7 +107,7 @@
     color: $primary-color-silver;
 
     @include tablet {
-      margin-bottom: 2.25rem;
+      margin: 0;
       width: 25%;
     }
 
@@ -132,6 +132,7 @@
     @include tablet {
       margin: 0;
       width: 25%;
+      padding-top: 0.25rem;
     }
   }
 
@@ -144,7 +145,7 @@
     color: $primary-color-silver;
 
     @include tablet {
-      margin-bottom: 2.25rem;
+      margin: 0;
       width: 25%;
     }
 
@@ -167,6 +168,7 @@
     line-height: 1.25;
 
     @include tablet {
+      padding-top: 0.25rem;
       margin: 0;
       width: 25%;
     }
@@ -181,7 +183,7 @@
     color: $primary-color-silver;
 
     @include tablet {
-      margin-bottom: 2.25rem;
+      margin: 0;
       width: 25%;
     }
 
@@ -203,6 +205,7 @@
     line-height: 1.25;
 
     @include tablet {
+      padding-top: 0.25rem;
       width: 25%;
     }
   }
@@ -215,7 +218,7 @@
     padding: 0.625rem 2rem;
     background-color: $primary-color-black;
     font-weight: 600;
-    line-height: 1.25;
+    line-height: 1.5;
     border-radius: 0.25rem;
     width: 100%;
     border: none;
@@ -223,13 +226,13 @@
     height: 2.5rem;
     display: inline-block;
     text-align: center;
-    vertical-align: middle;
     margin: 1.5rem 0 0;
 
     &--visibility-hidden {
       display: none;
       @include tablet {
         display: block;
+        height: 0;
         visibility: hidden;
       }
     }
