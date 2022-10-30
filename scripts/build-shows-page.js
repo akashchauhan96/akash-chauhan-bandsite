@@ -9,13 +9,14 @@ axios
   .then((response) => {
     //Call this function to generate the Title for all viewports and headings of the shows table which will only be displayed on tablet and desktop viewports
     const responseData = response.data;
-    const headingsArray = ["Date", "Venue", "Location"];
     showTitleAndHeadings();
     // console.log(responseData);
     responseData.forEach((showItem) => {
       generateShowSchedule(showItem);
       // console.log(showItem);
     });
+    const showsContainerEl = document.querySelector(".shows-table__container");
+    // eventListener(showsContainerEl);
     
   })
   .catch((err) => {
@@ -31,8 +32,6 @@ function showTitleAndHeadings() {
   const showsContainerEl = document.createElement("div");
   showsContainerEl.classList.add("shows-table__container");
   sectionEl.appendChild(showsContainerEl);
-
-  // eventListener(showsContainerEl);
   
   const showsTitleEl = document.createElement("h2");
   showsTitleEl.classList.add("shows-table__title");
@@ -119,31 +118,58 @@ function generateShowSchedule(showList) {
   articleEl.appendChild(buttonEl);
 }
 
-function eventListener(singleShow) {
-  console.log(singleShow);
-  singleShow.addEventListener("mouseover", () => {
-    singleShow.classList.add('tickets--hover')
-  });
+function eventListener(showListing) {
+  console.log(showListing);
+  showListing.addEventListener("mouseover", () => {
+    showListing.classList.add("tickets--hover");
+  })
 
-  singleShow.addEventListener("mouseout", () => {
-    singleShow.classList.remove("tickets--hover");
-  });
+  showListing.addEventListener("mouseout", () => {
+    showListing.classList.remove("tickets--hover")
+  })
+
+  showListing.addEventListener("click", () => {
+    if(document.querySelector(".tickets--selected.tickets--hover")) {
+        showListing.classList.remove("tickets--selected");
+      }
+  
+    else if(document.querySelector(".tickets--hover") && document.querySelector(".tickets--selected")) {
+      const clearSelectedShow = document.querySelector(".tickets--selected");
+      clearSelectedShow.classList.remove("tickets--selected");
+      showListing.classList.add("tickets--selected");
+    }
+  
+    else {
+      showListing.classList.add("tickets--selected");
+    }
+  })
 }
+  // const showContainer = document.querySelector(".shows-table__container");
+  // const showsAll = showContainer.querySelectorAll("article");
+  // console.log(showsAll);
+  // showsAll.forEach((showListing) => {
+  //   showListing.addEventListener("mouseover", () => {
+  //     showListing.classList.add('tickets--hover');
+  //   });
 
-//   <article class="tickets">
-//   <p class="tickets__date-title tickets__date-title--hide-tablet">
-//     Date
-//   </p>
-//   <p class="tickets__date">Mon Sept 06 2021</p>
-//   <p class="tickets__venue-title tickets__venue-title--hide-tablet">
-//     Venue
-//   </p>
-//   <p class="tickets__venue">Ronald Lane</p>
-//   <p
-//     class="tickets__location-title tickets__venue-title--hide-tablet"
-//   >
-//     Location
-//   </p>
-//   <p class="tickets__location">San Francisco, CA</p>
-//   <a href="./index.html" class="tickets__buy-button">Buy Tickets</a>
-// </article>
+  //   showListing.addEventListener("mouseout", () => {
+  //     showListing.classList.remove("tickets--hover");
+  //   });
+
+  //   showListing.addEventListener("click", () => {
+  //     if(document.querySelector(".tickets--selected.tickets--hover")) {
+  //       showListing.classList.remove("tickets--selected");
+  //     }
+
+  //     else if(document.querySelector(".tickets--hover") && document.querySelector(".tickets--selected")) {
+  //       const clearSelectedShow = document.querySelector(".tickets--selected");
+  //       clearSelectedShow.classList.remove("tickets--selected");
+  //       showListing.classList.add("tickets--selected");
+  //     }
+
+  //     else {
+  //       showListing.classList.add("tickets--selected");
+  //     }
+  //   })
+  // })
+
