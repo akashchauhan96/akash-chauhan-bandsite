@@ -111,6 +111,8 @@ function generateShowSchedule(showList) {
   buttonEl.classList.add('tickets__buy-button');
   buttonEl.innerText = "Buy Tickets";
   articleEl.appendChild(buttonEl);
+
+  buttonHover(buttonEl);
 }
 
 function eventListener(showListing) {
@@ -139,32 +141,15 @@ function eventListener(showListing) {
     }
   })
 }
-  // const showContainer = document.querySelector(".shows-table__container");
-  // const showsAll = showContainer.querySelectorAll("article");
-  // console.log(showsAll);
-  // showsAll.forEach((showListing) => {
-  //   showListing.addEventListener("mouseover", () => {
-  //     showListing.classList.add('tickets--hover');
-  //   });
 
-  //   showListing.addEventListener("mouseout", () => {
-  //     showListing.classList.remove("tickets--hover");
-  //   });
+function buttonHover(button) {
+  console.log(button);
+  button.addEventListener("mouseover", () => {
+    button.classList.add("tickets__buy-button--hover");
+  })
 
-  //   showListing.addEventListener("click", () => {
-  //     if(document.querySelector(".tickets--selected.tickets--hover")) {
-  //       showListing.classList.remove("tickets--selected");
-  //     }
-
-  //     else if(document.querySelector(".tickets--hover") && document.querySelector(".tickets--selected")) {
-  //       const clearSelectedShow = document.querySelector(".tickets--selected");
-  //       clearSelectedShow.classList.remove("tickets--selected");
-  //       showListing.classList.add("tickets--selected");
-  //     }
-
-  //     else {
-  //       showListing.classList.add("tickets--selected");
-  //     }
-  //   })
-  // })
+  button.addEventListener("mouseout", () => {
+    button.classList.remove("tickets__buy-button--hover")
+  })
+}
 

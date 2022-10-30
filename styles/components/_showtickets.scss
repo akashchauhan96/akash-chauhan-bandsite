@@ -234,8 +234,8 @@
       }
     }
 
-    &:hover {
-      background-color: $primary-color-black;
+    &--hover {
+      background-color: $secondary-color-darkblack;
     }
 
     @include tablet {

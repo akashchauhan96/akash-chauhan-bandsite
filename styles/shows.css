@@ -565,6 +565,9 @@ strong {
     visibility: hidden;
   }
 }
+.tickets__buy-button--hover {
+  background-color: #000;
+}
 @media (min-width: 48rem) {
   .tickets__buy-button {
     width: auto;
