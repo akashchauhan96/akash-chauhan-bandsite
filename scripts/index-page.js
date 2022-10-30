@@ -1,5 +1,5 @@
 //retrieve comments from API
-const apiKey = "62f3dbfe-ee60-419a-b9f6-22a96317578a";
+const apiKey = "4f83aa83-d73a-4c38-aa5f-abd25803e279";
 const apiAppend = "?api_key=";
 const url = "https://project-1-api.herokuapp.com/";
 const commentsRoute = "comments/";

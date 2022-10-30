@@ -395,8 +395,8 @@ strong {
 @media (min-width: 80rem) {
   .tickets {
     width: 49.75rem;
-    margin: 2rem 0 0 14rem;
-    padding: 0 1.5rem 1rem;
+    margin: 0 0 0 14rem;
+    padding: 1rem 1.5rem;
   }
 }
 @media (min-width: 48rem) {
@@ -416,7 +416,7 @@ strong {
 }
 @media (min-width: 80rem) {
   .tickets__column-headings--hide-mobile {
-    margin: 0 0 0 7rem;
+    margin: 0 0 2rem 7rem;
     align-items: flex-end;
     width: 49.75rem;
     padding: 0 1.5rem;
