@@ -402,6 +402,9 @@ strong {
 .tickets--hover {
   background-color: #fafafa;
 }
+.tickets--selected {
+  background-color: #e1e1e1;
+}
 @media (min-width: 48rem) {
   .tickets__column-headings {
     display: flex;

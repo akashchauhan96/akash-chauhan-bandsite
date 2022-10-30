@@ -71,6 +71,10 @@
     background-color: $secondary-color-alabaster;
   }
 
+  &--selected {
+    background-color: $secondary-color-mercury;
+  }
+
   &__column-headings {
     @include tablet {
       display: flex;
