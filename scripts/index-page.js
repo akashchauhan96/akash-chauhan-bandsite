@@ -1,16 +1,10 @@
-//retrieve comments from API
+//Retrieve comments from API
 const apiKey = "4f83aa83-d73a-4c38-aa5f-abd25803e279";
 const apiAppend = "?api_key=";
 const url = "https://project-1-api.herokuapp.com/";
 const commentsRoute = "comments/";
 
 commentsRetrieve();
-// console.log(commentsList);
-
-// for (let i=0; i<commentsList.length; i++) {
-//   displayComment(commentsList[i]);
-// }
-
 
 const formEl = document.getElementById("form");
 console.log(formEl);
@@ -41,35 +35,12 @@ formEl.addEventListener("submit", (e) => {
       .post(`${url}${commentsRoute}${apiAppend}${apiKey}`, newObjectComment) 
 
       .then(() => {
-        // const axiousGet = axios.get(`${url}${commentsRoute}${apiAppend}${apiKey}`)
-        // axiousGet.then((response) => {
-        // const responseData = response.data;
-        // if (responseData.length > 2) {
-        //   const newComment = responseData.pop();
-        //   responseData.unshift(newComment);
-        // }
         commentsRetrieve();
       })
       .catch((err) => {
         console.log(err);
       })
   }
-
-
-
-
-      //Render a new "empty" comment list
-      // const newCommentArrayEl = document.querySelector(".comment-array");
-      // newCommentArrayEl.innerHTML = "";
-      // displayComment(newCommentArrayEl);
-        
-      //Populate the first index of the existing array with the new object you generated after gathering name and comment info of the new user
-      
-      // comments.unshift(newObjectComment);
-        
-      //Run the function again and see the magic happen!!!!!!
-      
-      // displayComment(comments);
 });
 
 
@@ -89,20 +60,6 @@ function commentsRetrieve() {
     })
 
     console.log(responseData);
-
-
-
-    // for(let i=0; i<responseData.length; i++) {
-    //   if (responseData[i].timestamp > maxtimestamp) {
-    //     newCommentsArray.unshift(responseData[i]);
-    //     maxtimestamp = responseData[i].timestamp;
-    //   }
-    //   else {
-    //     newCommentsArray.push(responseData[i]);
-    //   }
-    // }
-
-    // console.log(newCommentsArray);
 
     document.querySelector(".comment-array").innerHTML = "";
 
@@ -141,16 +98,6 @@ function dateGenerator(date) {
   const year = newDate.getFullYear();
   return `${month}/${day}/${year}`;
 }
-
-// function commentSorter(array) {
-//   for (let i=0; i<array.length; i++) {
-//     const date = new Date(array[i].timestamp); 
-//     const year = date.getFullYear();
-//     const month = date.getMonth()+1;
-//     const day = date.getDate();
-//     if ()
-//   }
-// }
 
 //function displayComment that takes one input as parameter
 function displayComment(newComment) {
@@ -221,24 +168,3 @@ function fieldsCompletedCheck(name, comment) {
     return;
   }
 }
-/* <article class="comment-array">
-<div class="comment-array__avatar-container">
-  <!-- <img
-    src="./assets/images/Mohan-muruge.jpg"
-    alt="avatar image of the person submitting comment"
-    class="comment-section__avatar-image"
-  /> -->
-</div>
-<div class="comment-array__container-no-image">
-  <div class="comment-array__name-date-wrapper">
-    <p class="comment-array__name">Connor Walton</p>
-    <p class="comment-array__date">02/17/2021</p>
-  </div>
-  <p class="comment-array__comment">
-    This is art. This is inexplicable magic expressed in the purest
-    way, everything that makes up this majestic work deserves
-    reverence. Let us appreciate this for what it is and what it
-    contains.
-  </p>
-</div>
-</article> */
