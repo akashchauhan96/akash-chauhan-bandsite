@@ -681,11 +681,9 @@ span {
     margin-left: auto;
   }
 }
-.comment-form__error {
-  font-size: 0.875rem;
-  color: red;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
+.comment-form__button:hover {
+  background-color: #000;
+  cursor: pointer;
 }
 
 .comment-array {

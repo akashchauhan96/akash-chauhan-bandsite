@@ -178,13 +178,11 @@
       width: auto;
       margin-left: auto;
     }
-  }
 
-  &__error {
-    font-size: 0.875rem;
-    color: red;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
+    &:hover {
+      background-color: $secondary-color-darkblack;
+      cursor: pointer;
+    }
   }
 }
 
