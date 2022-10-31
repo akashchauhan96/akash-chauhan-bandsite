@@ -1,13 +1,14 @@
-//Retrieve comments from API
-const apiKey = "4f83aa83-d73a-4c38-aa5f-abd25803e279";
+//Retrieve comments from API and crate const variables to store different parts of the url
+const apiKey = "34cc7d80-a8b6-475b-b5d1-a42a2681b421";
 const apiAppend = "?api_key=";
 const url = "https://project-1-api.herokuapp.com/";
 const commentsRoute = "comments/";
 
+//Invoke the commentsRetrieve function which use axious .get to acquire comments from the API and sorts it by newest timestamp. 
 commentsRetrieve();
 
+
 const formEl = document.getElementById("form");
-console.log(formEl);
       
 formEl.addEventListener("submit", (e) => {
   console.log(e);
@@ -50,33 +51,19 @@ function commentsRetrieve() {
   axiousGet.then((response) => {
     const responseData = response.data;
     console.log(responseData);
-
-    // let maxtimestamp = 0;
-    const newCommentsArray = [];
     
     //Using sort to show the most recent comments first by arranging the timestamp with the highest value to show up on
     responseData.sort((a,b) => {
       return b.timestamp - a.timestamp;
     })
 
-    console.log(responseData);
-
     document.querySelector(".comment-array").innerHTML = "";
 
-    //Timestamp conversion from epoch format to day/month/year date format
-    for (let i=0; i<newCommentsArray.length; i++) {
-      newCommentsArray[i].timestamp = dateGenerator(newCommentsArray[i].timestamp);
-      displayComment(newCommentsArray[i])
-    }
-    
-
-    // console.log(newCommentsArray);
+    responseData.forEach((comment) => {
+      comment.timestamp = dateGenerator(comment.timestamp);
+    })
 
     responseData.forEach(displayComment);
-
-  
-    // console.log(responseData);
-
   })
   axiousGet.catch((err) => {
   console.log(err);
@@ -86,6 +73,7 @@ function commentsRetrieve() {
 
 //function below gets the right format for the date to be added into the comment list
 function dateGenerator(date) {
+  console.log(date);
   const newDate = new Date(date);
   let month = newDate.getMonth() + 1;
   if (month<10) {
