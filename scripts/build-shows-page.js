@@ -1,5 +1,5 @@
 //Retrieve shows info from API using same key as the one used for comments
-const apiKey = "34cc7d80-a8b6-475b-b5d1-a42a2681b421";
+const apiKey = "0410893d-95ca-4b10-aac2-d2e6085283f1";
 const apiAppend = "?api_key=";
 const url = "https://project-1-api.herokuapp.com/";
 const showsRoute = "showdates/";
