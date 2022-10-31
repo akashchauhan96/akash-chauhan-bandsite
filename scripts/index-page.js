@@ -7,7 +7,7 @@ const commentsRoute = "comments/";
 //Invoke the commentsRetrieve function which use axious .get promise function to acquire comments from the API and sorts it by newest timestamp. 
 commentsRetrieve();
 
-//Add an event listener on the HTML form denoted with #form  
+//Add an event listener on the HTML form 
 document.getElementById("form").addEventListener("submit", (e) => {
   console.log(e);
   e.preventDefault();
@@ -28,10 +28,12 @@ document.getElementById("form").addEventListener("submit", (e) => {
     e.target.name.value = "";
     e.target.comment.value = "";
 
+    //Axious post the new comment object created earlier with the name and comment properties onto the api route
     axios
       .post(`${url}${commentsRoute}${apiAppend}${apiKey}`, newObjectComment) 
 
       .then(() => {
+        //With the new comment posted, invoke the comments retrieve function to now get the new array from api and show both the old and the new comment that was added
         commentsRetrieve();
       })
       .catch((err) => {
@@ -48,19 +50,23 @@ function commentsRetrieve() {
     const responseData = response.data;
     console.log(responseData);
     
-    //Using sort to show the most recent comments first by arranging the timestamp with the highest value to show up on
+    //Using sort to show the most recent comments first by arranging the timestamp with the highest value to show up on the first index of the array
     responseData.sort((a,b) => {
       return b.timestamp - a.timestamp;
     })
 
+    //Clear the comments array containing any existing comments
     document.querySelector(".comment-array").innerHTML = "";
 
+    //Use forEach function to pass each timestamp from each object to the dateGenerator function so it can convert it to the right date format
     responseData.forEach((comment) => {
       comment.timestamp = dateGenerator(comment.timestamp);
     })
 
+    //With comments sorted with the most recent appearing on top and containing the dates in the right format display the comments on the page
     responseData.forEach(displayComment);
   })
+  //catch any errors and console log the error if the promise fails
   axiousGet.catch((err) => {
   console.log(err);
   })
@@ -118,8 +124,9 @@ function displayComment(newComment) {
   containerNoImgEl.appendChild(commentEl);
 }
 
-
+//This function checks to see if the name field and comment field is filled or not. If not, then highlight the borders of the field in red after the submit comment button is clicked
 function fieldsCompletedCheck(name, comment) {
+  //Both name and comment fields are highlighted in red
   if (name === "" && comment === "") {
     const nameError = document.querySelector("#name");
     const commentError = document.querySelector("#comment");
@@ -128,6 +135,7 @@ function fieldsCompletedCheck(name, comment) {
     return;
   }
 
+  //If comment is filled and name is not only apply the error class to name and remove error class from comment
   else if (name === "" && comment) {
     const nameError = document.querySelector("#name");
     nameError.classList.add("comment-form__name--error");
@@ -136,6 +144,7 @@ function fieldsCompletedCheck(name, comment) {
     return;
   }
 
+  //If comment is empty but name is filled out apply the error class to comment but remove it from name
   else if (comment === "" && name) {
     const nameError = document.querySelector("#name");
     const commentError = document.querySelector("#comment");
@@ -144,6 +153,7 @@ function fieldsCompletedCheck(name, comment) {
     return;
   }
 
+  //If both fields are filled out ensure to remove error classes form the both the fields and return back to event listener function to execute the other functions
   else {
     const nameError = document.querySelector("#name");
     const commentError = document.querySelector("#comment");
