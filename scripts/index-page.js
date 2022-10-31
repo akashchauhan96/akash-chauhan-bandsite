@@ -4,13 +4,11 @@ const apiAppend = "?api_key=";
 const url = "https://project-1-api.herokuapp.com/";
 const commentsRoute = "comments/";
 
-//Invoke the commentsRetrieve function which use axious .get to acquire comments from the API and sorts it by newest timestamp. 
+//Invoke the commentsRetrieve function which use axious .get promise function to acquire comments from the API and sorts it by newest timestamp. 
 commentsRetrieve();
 
-
-const formEl = document.getElementById("form");
-      
-formEl.addEventListener("submit", (e) => {
+//Add an event listener on the HTML form denoted with #form  
+document.getElementById("form").addEventListener("submit", (e) => {
   console.log(e);
   e.preventDefault();
   let name = e.target.name.value;
@@ -29,8 +27,6 @@ formEl.addEventListener("submit", (e) => {
     //The two lines of code below clear the input fields of the HTML form
     e.target.name.value = "";
     e.target.comment.value = "";
-
-    console.log(name);
 
     axios
       .post(`${url}${commentsRoute}${apiAppend}${apiKey}`, newObjectComment) 
